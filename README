@@ -1,0 +1,57 @@
+This directory contains a implmentation of mymake, partial_mymake, that runs on linprog. mymake does support flags '-f mf', '-p', '-d', '-k', '-i', and '-t num' flags and the command line parsing. It is similar to UNIX mymake. When you download the folder from canvas, you should upload it to linprog and unzip the file there. Then use make to create the program. Below are my test. You should set mypath environment before run the program
+I set it as default path in linprog
+
+setenv("MYPATH", "/home/grads/nvu/.bin:/home/grads/nvu/.scripts:/usr/local/bin:/opt/sfw/bin:/usr/sfw/bin:/bin:/usr/bin:/usr/ccs/bin:/usr/ucb:.", 1);
+
+
+Below are some testing
+
+// check to see the default makefile it look for
+./mymake -d
+
+// check to see how it handle -i flag
+./mymake -i
+
+// check to see the pipe work
+./mymake -f mymake3.mk
+
+// inference rule
+./mymake -f makefile4
+
+// to see how it compare the time (run 2 time)
+./mymake -f makefile1 -d
+
+// to see how it handle flag -t num 
+./mymake -t 1
+
+// to see how it handle ; and cd
+./mymake -f makefile2
+
+// to see how the redirection work
+./mymake -f mymake2.mk
+
+./mymake -f makefile1 test0
+
+./mymake -f makefile1 test0 -p
+
+./mymake -f makefile1 test0 -p
+
+
+./mymake -f makefile1 test1
+
+
+./mymake -f makefile1 test1
+
+./mymake -f makefile1 test1 -k
+
+./mymake -f makefile1 test2
+
+./mymake -f makefile1 test3
+
+./mymake -f makefile4 
+
+
+
+
+
+

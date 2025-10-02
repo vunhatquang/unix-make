@@ -1,0 +1,4 @@
+Hello:
+	cd ..; ls
+	echo "hello"
+	ls 
